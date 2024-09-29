@@ -1,0 +1,18 @@
+---
+import CardCommercial from "../components/CardCommercial.astro"
+import { servicesCommercials } from "../libs/data"
+---
+
+<h2 class='text-center my-4 text-3xl font-semibold'>Extra Services</h2>
+<div class='grid grid-cols-1 px-3 md:px-0 md:grid-cols-3 gap-4'>
+	{
+		servicesCommercials.map(({ title, description, src, keywords }) => (
+			<CardCommercial
+				title={title}
+				description={description}
+				src={src}
+				keywords={keywords}
+			/>
+		))
+	}
+</div>

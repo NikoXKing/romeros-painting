@@ -1,0 +1,46 @@
+---
+import ButtonEmail from "../ButtonEmail.astro"
+import Verified from "../icons/Verified.astro"
+interface Props {
+	title: string
+	body: string
+	image: string
+	list?: string[]
+}
+const { title, body, image, list = [] } = Astro.props
+---
+
+<section class='bg-transparent dark:bg-gray-900'>
+	<div
+		class='gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6'
+	>
+		<img
+			class='w-full aspect-square object-cover dark:hidden rounded-3xl'
+			src={image}
+			alt={title}
+		/>
+		<div class='mt-4 md:mt-0'>
+			<h2
+				class='mb-4 text-4xl tracking-tight font-extrabold text-gray-900 uppercase dark:text-white'
+			>
+				{title}
+			</h2>
+			<p class='mb-3 text-gray-900 md:text-lg dark:text-gray-700'>
+				{body}
+			</p>
+			{
+				list.length !== 0 && (
+					<ul class='flex flex-col gap-1 text-left text-gray-700 my-5 dark:text-gray-400'>
+						{list.map((value) => (
+							<li class='flex items-center space-x-3 rtl:space-x-reverse capitalize'>
+								<Verified />
+								<span>{value}</span>
+							</li>
+						))}
+					</ul>
+				)
+			}
+			<ButtonEmail />
+		</div>
+	</div>
+</section>

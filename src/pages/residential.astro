@@ -1,0 +1,39 @@
+---
+import TargetModal from "../components/TargetModal.astro"
+import Layout from "../layouts/Layout.astro"
+import SectionCta from "../components/sections/SectionCta.astro"
+import Gallery from "../components/Gallery.astro"
+import Modal from "../components/Modal.astro"
+import { residential } from "../libs/data"
+---
+
+<Layout title='Welcome to Astro.'>
+	<SectionCta
+		image='/imagenes/residential/portada.jpg'
+		title='residential painting'
+		body={"Our ultimate aim is to meet and exceed our clients' expectations through our meticulous work. We understand that the finishing touches on a residence serve as its public face. When we successfully achieve our goal, the value of our efforts becomes evident. Before painting, our professional painters prioritize thorough preparation, which includes expertly addressing any surface imperfections through techniques such as scraping, sanding, caulking, drywall repair, and wood restoration. This commitment to preparation ensures that the quality of our work shines through in every aspect of the home, including accent walls, stains, and desired finishes."}
+		list={["interior", "Exterior"]}
+	/>
+	<div class='grid grid-cols-1 sm:grid-cols-2'>
+		<div>
+			<h2 class='text-center text-3xl font-semibold'>Inside</h2>
+			<TargetModal id='12'>
+				<Gallery images={residential.inside} />
+			</TargetModal>
+			<Modal title='Gallery inside' id='12'>
+				<Gallery images={residential.inside} />
+			</Modal>
+		</div>
+		<div>
+			<h2 class='text-center text-3xl font-semibold'>Outside</h2>
+			<TargetModal id='24'>
+				<Gallery images={residential.outside} />
+			</TargetModal>
+			<Modal title='Gallery outside' id='24'>
+				<Gallery images={residential.outside} />
+			</Modal>
+		</div>
+	</div>
+
+	<!-- TODO: Componente de Before y After con fotos originales -->
+</Layout>

@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro"
+import SectionCta from "../components/sections/SectionCta.astro"
+import BeforeAfter from "../components/Before-After.astro"
+import { imgsbefore_after } from "../libs/data"
+---
+
+<Layout title='Welcome to Astro.'>
+	<SectionCta
+		image='/imagenes/remodeling/portada.jpg'
+		title='remodeling'
+		body={"When clients express their desire to remodel, it signals a yearning for something fresh and exciting. At Romero’s Painting, we understand that ‘remodel’ signifies more than just a change—it’s about transformation and renewal, whether it's in a home or an entire building. Our goal is to transport you to a revitalized environment, providing a breath of fresh air with every completed project."}
+		list={["remodel", "transformation", "modernize"]}
+	/>
+	<!-- Poner las fotos originales de remodeling en el componente. -->
+	<BeforeAfter data={imgsbefore_after} />
+</Layout>

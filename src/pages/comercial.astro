@@ -1,0 +1,41 @@
+---
+import { comercial } from "../libs/data"
+import Layout from "../layouts/Layout.astro"
+import SectionCta from "../components/sections/SectionCta.astro"
+import Gallery from "../components/Gallery.astro"
+import TargetModal from "../components/TargetModal.astro"
+import Modal from "../components/Modal.astro"
+import ServicesInfo from "../components/ServicesInfo.astro"
+---
+
+<Layout title='Welcome to Astro.'>
+	<SectionCta
+		image='/imagenes/commercial/portada.jpg'
+		title='commercial painting'
+		body={"Our team's top priority is to surpass customer expectations. We prioritize both exterior and interior excellence in our projects, recognizing that presentation sets the tone and daily surroundings influence satisfaction. Our approach, encapsulated in the 4 P's—Protect, Prepare, Paint, Prevail—ensures consistent customer satisfaction."}
+		list={["protect", "prepare", "paint", "prevail"]}
+	/>
+	<div class='grid grid-cols-1 sm:grid-cols-2'>
+		<div>
+			<h2 class='text-center text-3xl font-semibold'>Inside</h2>
+			<TargetModal id='12'>
+				<Gallery images={comercial.interior} />
+			</TargetModal>
+			<Modal title='Gallery inside' id='12'>
+				<Gallery images={comercial.interior} />
+			</Modal>
+		</div>
+		<div>
+			<h2 class='text-center text-3xl font-semibold'>Outside</h2>
+			<TargetModal id='24'>
+				<Gallery images={comercial.exterior} />
+			</TargetModal>
+			<Modal title='Gallery outside' id='24'>
+				<Gallery images={comercial.exterior} />
+			</Modal>
+		</div>
+	</div>
+	<div class='my-10'>
+		<ServicesInfo />
+	</div>
+</Layout>

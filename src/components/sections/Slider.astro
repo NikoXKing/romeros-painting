@@ -1,0 +1,80 @@
+---
+import { Image } from "astro:assets"
+import { slideHome } from "../../libs/data"
+---
+
+<!-- Slider main container -->
+<div class='swiper swiper-hero z-0'>
+	<!-- Additional required wrapper -->
+	<div class='swiper-wrapper'>
+		<!-- Slides -->
+		{
+			slideHome.map(({ name, img }) => (
+				<div class='swiper-slide'>
+					<div class='swiper-zoom-container relative'>
+						<h2 class='absolute top-6 left-12 md:left-36 text-2xl md:text-6xl animate-fade animate-duration-[2000ms] text-black'>
+							{name}
+						</h2>
+						<Image
+							width={200}
+							height={200}
+							class={
+								"w-5/6 rounded-lg shadow-xl aspect-video object-cover dark:shadow-gray-900"
+							}
+							src={img}
+							alt={"Foto de slider"}
+						/>
+					</div>
+				</div>
+			))
+		}
+	</div>
+	<!-- If we need pagination -->
+	<div class='swiper-pagination'></div>
+
+	<div class='swiper-button-prev'></div>
+	<div class='swiper-button-next'></div>
+</div>
+
+<script>
+	import Swiper from "swiper"
+	import { Navigation, Pagination, Autoplay, Zoom } from "swiper/modules"
+	// import Swiper and modules styles
+	new Swiper(".swiper-hero", {
+		modules: [Navigation, Pagination, Autoplay, Zoom],
+		enabled: true,
+		// Optional parameters
+		autoHeight: true,
+		centeredSlides: true,
+		loop: true,
+		zoom: {
+			containerClass: "swiper-zoom-container",
+			toggle: true,
+			maxRatio: 5,
+			minRatio: 1
+		},
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: true,
+			pauseOnMouseEnter: true
+		},
+		navigation: {
+			enabled: false,
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev"
+		},
+		// If we need pagination
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+			dynamicBullets: true
+		},
+		breakpoints: {
+			770: {
+				navigation: {
+					enabled: true
+				}
+			}
+		}
+	})
+</script>

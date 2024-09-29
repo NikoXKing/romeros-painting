@@ -1,0 +1,30 @@
+---
+import type { Imagen } from '../types'
+
+interface Imagenes {
+	data: Imagen[][]
+}
+const { data } = Astro.props as Imagenes
+---
+
+<div class='grid grid-cols-2 md:grid-cols-3 gap-4 p-2'>
+	{
+		typeof data !== "undefined" ? (
+		data.map((grupo) => (
+				<div class='grid gap-4'>
+					{grupo.map(({ src, alt }) => (
+						<div>
+							<img
+								class='h-auto max-w-full rounded-lg'
+								src={src}
+								alt={alt}
+							/>
+						</div>
+					))}
+				</div>
+			))
+		) : (
+			<></>
+		)
+	}
+</div>

@@ -1,0 +1,10 @@
+---
+interface Props {
+	id: string
+}
+const { id } = Astro.props
+---
+
+<div data-modal-target={`modal-${id}`} data-modal-toggle={`modal-${id}`}>
+	<slot />
+</div>
