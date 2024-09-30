@@ -4,9 +4,11 @@ import Layout from "../layouts/Layout.astro"
 import SectionCta from "../components/sections/SectionCta.astro"
 
 import { industrial } from "../libs/data"
-import { dividirEnGrupos } from "../libs/index.js"
+import { dividirEnGrupos } from "../libs/index"
 
 const masonry = dividirEnGrupos(industrial, 3)
+
+export const prerender = true
 ---
 
 <Layout title='Welcome to Astro.'>
