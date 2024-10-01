@@ -1,6 +1,7 @@
 ---
 import Toast from "../components/Toast.astro"
 import Layout from "../layouts/Layout.astro"
+import { sendEmailQuote } from "../libs/emails"
 import { isValidEmail } from "../libs/index"
 
 interface toastProps {
@@ -19,8 +20,8 @@ if (Astro.request.method === "POST") {
 
 		//@ts-ignore
 		if (email !== null && isValidEmail(email)) {
-			//TODO: Enviar email con mensaje
-			console.log(email)
+			//@ts-ignore
+			await sendEmailQuote(email, name, message)
 			toast = { ...toast, message: "Message Send", variant: "send" }
 		}
 	} catch (error) {
