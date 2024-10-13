@@ -10,11 +10,11 @@ const transporter = nodemailer.createTransport({
     },
 })
 
-export const sendEmailQuote = async (email: string, fullName: string, message: string) => {
+export const sendEmailQuote = async (email: string, subject: string, fullName: string, message: string) => {
     const emailQuote: SendMailOptions = {
         from: 'nikolay.envialia@gmail.com',
         to: 'omar@romerospaintingmaintenance.com',
-        subject: 'Quote from WebSite',
+        subject,
         html: `
         <p>Ha llegado un email de: ${fullName}</p>
         <p>Con el siguiente email: ${email}</p>

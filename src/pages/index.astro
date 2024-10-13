@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro"
+
+import Hero from "../components/sections/Hero.astro"
 import Slider from "../components/sections/Slider.astro"
 import AboutLanding from "../components/sections/AboutLanding.astro"
 import Services from "../components/sections/Services.astro"
@@ -8,10 +10,11 @@ import Certificates from "../components/sections/Certificates.astro"
 export const prerender = true
 ---
 
-<Layout title='Welcome to Astro.'>
-	<Slider />
-	<AboutLanding />
+<Layout title='Romeros Painting'>
+	<Hero />
+	<!-- <Slider /> -->
 	<Services />
+	<AboutLanding />
 	<Certificates />
 	<Brands />
 </Layout>
