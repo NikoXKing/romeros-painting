@@ -146,37 +146,37 @@ export const imgsbefore_after = [
 export const servicesCommercials = [
     {
         title: 'HIGH PERFORMANCE COATINGS EPOXY, URETHANE',
-        src: 'https://www.romerospaintingmaintenance.com/wp-content/uploads/2019/05/coatings.jpg',
+        src: 'imagenes/commercial/services/coatings.jpg',
         description: 'These coatings provide unmatched durability and protection. Ideal for harsh environments, they resist chemicals, abrasion, and wear, ensuring long-lasting surface protection.',
         keywords: ["Durability", "Protection", "Abrasion-resistant"]
     },
     {
         title: 'LARGE SCALE PRESSURE WASHING',
-        src: 'https://www.romerospaintingmaintenance.com/wp-content/uploads/2019/05/pressure-washing.jpg',
+        src: 'imagenes/commercial/services/pressure-washing.jpg',
         description: 'Efficient and powerful cleaning for large surfaces. Perfect for industrial and commercial spaces, removing dirt, grime, and buildup with ease. Ideal for buildings, parking lots, and outdoor areas.',
         keywords: ["Pressure washing", "Large-scale cleaning", "Industrial cleaning"]
     },
     {
         title: 'CAULKING AND DRYWALL REPAIRS',
-        src: 'https://www.romerospaintingmaintenance.com/wp-content/uploads/2019/05/caulking-drywall-repairs.jpg',
+        src: 'imagenes/commercial/services/caulking-drywall-repairs.jpg',
         description: 'Professional caulking and drywall repair services to seal gaps, prevent moisture damage, and restore walls to a smooth finish. Ideal for both residential and commercial properties, ensuring long-lasting protection and a flawless appearance.',
         keywords: ['Caulking', 'Drywall repairs', 'Moisture protection']
     },
     {
         title: 'CONCRETE FLOOR',
-        src: 'https://www.romerospaintingmaintenance.com/wp-content/uploads/2019/05/concrete-floor.jpg',
+        src: 'imagenes/commercial/services/concrete-floor.jpg',
         description: 'Expert concrete floor solutions for durable, long-lasting surfaces. Ideal for industrial, commercial, and residential spaces, providing strength, low maintenance, and a polished finish for any application.',
         keywords: ['Concrete floors', 'Durable surfaces', 'Polished finish']
     },
     {
         title: 'JOINT SEALANTS',
-        src: 'https://www.romerospaintingmaintenance.com/wp-content/uploads/2019/05/joint-sealants.jpg',
+        src: 'imagenes/commercial/services/joint-sealants.jpg',
         description: 'High-quality joint sealant services to protect structures from water, air, and environmental damage. Perfect for sealing expansion joints in concrete, ensuring long-lasting durability and protection in both commercial and industrial settings.',
         keywords: ['Joint sealants', 'Expansion joints', 'Water protection']
     },
     {
         title: 'SPECIALTY FINISHES',
-        src: 'https://www.romerospaintingmaintenance.com/wp-content/uploads/2019/05/specialty-finishes.jpg',
+        src: 'imagenes/commercial/services/specialty-finishes.jpg',
         description: 'Unique textures and effects for a custom, high-end look. Perfect for residential and commercial projects, enhancing surfaces with distinctive, decorative finishes.',
         keywords: ['Specialty finishes', 'Custom textures', 'Decorative finishes']
     }
