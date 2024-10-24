@@ -1,4 +1,5 @@
 ---
+import RomerosPainting from "../components/icons/RomerosPainting.astro"
 import ServicesDesktop from "./Service-desktop.astro"
 import ServicesMobile from "./Service-mobile.astro"
 ---
@@ -11,14 +12,10 @@ import ServicesMobile from "./Service-mobile.astro"
 
 <nav class='bg-[#f3f3f3] border-gray-200 dark:bg-gray-900 dark:border-gray-700'>
 	<div
-		class='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5'
+		class='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-5 py-4'
 	>
 		<a href='/' class='flex items-center'>
-			<img
-				src='logo.png'
-				class='mr-3 w-[80px] lg:w-[95px]'
-				alt='Romeros Painting Logo'
-			/>
+			<RomerosPainting class='w-14 mr-1 md:w-24 md:mr-3' />
 			<span class='m-0 p-0 text-4xl romeros whitespace-nowrap'>R</span>
 			<h1
 				class='self-center text-2xl romeros whitespace-nowrap dark:text-white'
