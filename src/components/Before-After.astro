@@ -1,6 +1,6 @@
 ---
 import type { ImagesBeforeAfter } from "../types"
-
+import Image from "astro/components/Image.astro"
 interface Props {
 	data: ImagesBeforeAfter[]
 }
@@ -16,17 +16,21 @@ const { data } = Astro.props
 				<div class='swiper-slide'>
 					<two-up class='w-fit m-auto'>
 						<div class='flex justify-center items-center'>
-							<img
+							<Image
 								class='object-cover w-1/2'
 								src={before.src}
 								alt={before.alt}
+								width='800'
+								height='800'
 							/>
 						</div>
 						<div class='flex justify-center items-center'>
-							<img
+							<Image
 								class='object-cover w-1/2'
 								src={after.src}
 								alt={after.alt}
+								width='800'
+								height='800'
 							/>
 						</div>
 					</two-up>

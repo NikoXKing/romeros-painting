@@ -66,6 +66,7 @@ export const prerender = false
 						<form method='POST' class='mt-4'>
 							<div class='flex-1 mb-2'>
 								<label
+									for='name'
 									class='block mb-2 text-sm text-gray-600 dark:text-gray-200'
 									>Full Name</label
 								>
@@ -78,6 +79,7 @@ export const prerender = false
 							</div>
 							<div class='flex-1'>
 								<label
+									for='subject'
 									class='block mb-2 text-sm text-gray-600 dark:text-gray-200'
 									>Subject</label
 								>
@@ -91,6 +93,7 @@ export const prerender = false
 
 							<div class='flex-1 mt-6'>
 								<label
+									for='email'
 									class='block mb-2 text-sm text-gray-600 dark:text-gray-200'
 									>Email address</label
 								>
@@ -104,6 +107,7 @@ export const prerender = false
 
 							<div class='w-full mt-6'>
 								<label
+									for='message'
 									class='block mb-2 text-sm text-gray-600 dark:text-gray-200'
 									>Message</label
 								>
@@ -211,7 +215,8 @@ export const prerender = false
 						<div class='flex mt-4 -mx-1.5'>
 							<a
 								class='mx-1.5 text-black transition-colors duration-300 transform hover:text-blue-500'
-								href='#'
+								href='/'
+								aria-label='Twitter Romeros Painting'
 							>
 								<svg
 									class='w-10 h-10 fill-current'
@@ -226,8 +231,10 @@ export const prerender = false
 							</a>
 
 							<a
+								target='_blank'
 								class='mx-1.5 text-black transition-colors duration-300 transform hover:text-linked'
-								href='#'
+								href='https://www.linkedin.com/in/omar-martin-8a893472/'
+								aria-label='Linkedin Romeros Painting'
 							>
 								<svg
 									class='w-8 h-8'
@@ -252,6 +259,7 @@ export const prerender = false
 								rel='noreferrer'
 								href='https://www.facebook.com/painting26'
 								target='_blank'
+								aria-label='Romeros Painting Facebook'
 							>
 								<svg
 									class='w-8 h-8'
@@ -270,6 +278,7 @@ export const prerender = false
 								href='https://www.instagram.com/romeros_painting'
 								rel='noreferrer'
 								target='_blank'
+								aria-label='Instagram'
 							>
 								<svg
 									class='w-8 h-8'

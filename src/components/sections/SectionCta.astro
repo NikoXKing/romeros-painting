@@ -1,6 +1,7 @@
 ---
 import ButtonEmail from "../ButtonEmail.astro"
 import Verified from "../icons/Verified.astro"
+import Image from "astro/components/Image.astro"
 interface Props {
 	title: string
 	body: string
@@ -14,10 +15,13 @@ const { title, body, image, list = [] } = Astro.props
 	<div
 		class='gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6'
 	>
-		<img
+		<Image
 			class='w-full aspect-square object-cover dark:hidden rounded-3xl'
 			src={image}
 			alt={title}
+			width='600'
+			height='600'
+			loading='eager'
 		/>
 		<div class='mt-4 md:mt-0'>
 			<h2

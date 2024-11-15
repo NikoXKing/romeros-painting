@@ -1,3 +1,7 @@
+---
+import Image from "astro/components/Image.astro"
+---
+
 <section class="dark:bg-gray-900'">
 	<div
 		class='grid max-w-screen-xl px-4 py-6 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12'
@@ -57,10 +61,13 @@
 			</div>
 		</div>
 		<div class='hidden lg:mt-0 lg:col-span-5 lg:flex'>
-			<img
+			<Image
 				class='rounded-md aspect-square'
 				src='/imagenes/portada2.jpeg'
 				alt='mockup'
+				width='500'
+				height='500'
+				loading='eager'
 			/>
 		</div>
 	</div>

@@ -1,3 +1,7 @@
+---
+import Image from "astro/components/Image.astro"
+---
+
 <section class='grid grid-cols-1 sm:grid-cols-2 mt-20 gap-4'>
 	<div>
 		<h2 class='font-sans text-4xl font-bold text-center'>
@@ -10,21 +14,33 @@
 		</p>
 	</div>
 	<div class='flex flex-wrap gap-5 justify-center'>
-		<img
+		<Image
 			src='/imagenes/certificates/accredited-business.png'
 			class='object-cover w-60'
+			alt='BBB Accredited Business certificate showcasing trust and credibility for professional services.'
+			width='60'
+			height='60'
 		/>
-		<img
+		<Image
 			src='/imagenes/certificates/painting.png'
 			class='object-scale-down w-60'
+			alt='Certificate of Achievement in Painting and Decorating, recognizing professional skills and expertise in the painting industry.'
+			width='60'
+			height='60'
 		/>
-		<img
+		<Image
 			src='/imagenes/certificates/lead-safe.png'
 			class='object-scale-down w-48'
+			alt='EPA Lead-Safe Certified Firm certificate, demonstrating compliance with lead safety standards in renovation, repair, and painting.'
+			width='60'
+			height='60'
 		/>
-		<img
+		<Image
 			src='/imagenes/certificates/ampp.png'
 			class='object-scale-down w-48'
+			alt='AMPP (Association for Materials Protection and Performance) certificate, highlighting expertise in corrosion control and protective coatings.'
+			width='60'
+			height='60'
 		/>
 	</div>
 </section>
