@@ -7,8 +7,6 @@ import { industrial } from "../libs/data"
 import { dividirEnGrupos } from "../libs/index"
 
 const masonry = dividirEnGrupos(industrial, 3)
-
-export const prerender = true
 ---
 
 <Layout title='Industrial'>
@@ -23,6 +21,5 @@ export const prerender = true
 			"moisture mure mrethane"
 		]}
 	/>
-	<!-- TODO: Añadir 2 imagenes mas -->
 	<Masonry data={masonry} />
 </Layout>
