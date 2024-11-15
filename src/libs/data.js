@@ -104,8 +104,17 @@ export const industrial = [
         src: '/imagenes/industrial/6.webp',
         alt: 'Fondo de una industrial'
     },
+
+    {
+        src: '/imagenes/industrial/8.jpeg',
+        alt: 'Fondo de una industrial'
+    },
     {
         src: '/imagenes/industrial/7.webp',
+        alt: 'Fondo de una industrial'
+    },
+    {
+        src: '/imagenes/industrial/9.jpeg',
         alt: 'Fondo de una industrial'
     },
 ]
