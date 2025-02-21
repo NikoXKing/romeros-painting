@@ -1,10 +1,19 @@
 ---
 import Gallery from "../../components/Gallery.astro"
 import Layout from "../../layouts/Layout.astro"
-
+export async function getStaticPaths() {
+	return [
+		{ params: { id: "portfolio1" } } // Solo incluir estas rutas en la build
+		// No agregar la página en desarrollo
+	]
+}
+import type { SEOProps } from "astro-seo"
 const { id } = Astro.params
-const images = import.meta.glob(
-	`/imagenes/portfolio/${id}/*.{png,jpg,jpeg,gif,svg}`
+const filteredImages = import.meta.glob(
+	"/imagenes/portfolio/*/*.{png,jpg,jpeg,gif,svg}"
+)
+const images = Object.keys(filteredImages).filter((path) =>
+	path.includes(`/imagenes/portfolio/${id}/`)
 )
 
 const imagenes = Object.entries(images).map(([path]) => {
@@ -13,8 +22,13 @@ const imagenes = Object.entries(images).map(([path]) => {
 		alt: ""
 	}
 })
+
+const seoID: SEOProps = {
+	title: `Romeros Painting - Portfolio ${id}`
+}
+export const prerender = true
 ---
 
-<!-- <Layout title=`portfolio ${id}`>
+<Layout seo={seoID}>
 	<Gallery images={imagenes} />
-</Layout> -->
+</Layout>
