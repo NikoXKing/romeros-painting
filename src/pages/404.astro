@@ -1,8 +1,33 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import type { SEOProps } from "astro-seo"
+
+const SEOError: SEOProps = {
+	title: "Romeros Painting",
+	description: "Error page of Romeros Painting",
+	canonical: "https://romerospaintingmaintenance.com",
+	charset: "UTF-8",
+	openGraph: {
+		basic: {
+			title: "Romeros Painting",
+			image: "/logo-romeros-painting.svg",
+			type: "image",
+			url: "https://romerospaintingmaintenance.com"
+		}
+	},
+	twitter: {
+		title: "Romeros Painting",
+		description: "Error page of Romeros Painting",
+		card: "summary_large_image",
+		image: "logo-romeros-painting.svg",
+		imageAlt: "logo-romeros-painting.svg",
+		creator: "Omar Martin"
+	},
+	nofollow: false
+}
 ---
 
-<Layout title='Romeros Painting'>
+<Layout seo={SEOError}>
 	<section class='dark:bg-gray-900'>
 		<div class='py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6'>
 			<div class='mx-auto max-w-screen-sm text-center'>
