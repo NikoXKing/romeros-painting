@@ -1,8 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import type { SEOProps } from "astro-seo"
+const SEOTerms: SEOProps = {
+	title: "Romeros Painting - Privacy Policy",
+	description:
+		"Learn how Romero's Painting & Maintenance collects, uses, and protects your personal information. Read our Privacy Policy for full details.",
+	canonical: "https://romerospaintingmaintenance.com",
+	charset: "UTF-8"
+}
 ---
 
-<Layout title='Privacy Policy'>
+<Layout seo={SEOTerms}>
 	<style>
 		h1 {
 			@apply text-2xl font-bold mb-2;
