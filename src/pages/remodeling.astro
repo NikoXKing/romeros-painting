@@ -3,9 +3,34 @@ import Layout from "../layouts/Layout.astro"
 import SectionCta from "../components/sections/SectionCta.astro"
 import BeforeAfter from "../components/Before-After.astro"
 import { imgsbefore_after } from "../libs/data"
+import type { SEOProps } from "astro-seo"
+const summary =
+	"Top-quality residential painting in Fort Lauderdale & Miami. Interior & exterior painting for a fresh, new look. Contact us for a free estimate!"
+const SEORemodeling: SEOProps = {
+	title: "Romeros Painting - Remodeling",
+	description: summary,
+	canonical: "https://romerospaintingmaintenance.com",
+	charset: "UTF-8",
+	openGraph: {
+		basic: {
+			title: "Romeros Painting - Remodeling",
+			image: "/logo-romeros-painting.svg",
+			type: "image",
+			url: "https://romerospaintingmaintenance.com"
+		}
+	},
+	twitter: {
+		title: "Romeros Painting - Remodeling",
+		card: "summary_large_image",
+		image: "logo-romeros-painting.svg",
+		description: summary,
+		imageAlt: "logo-romeros-painting.svg",
+		creator: "Omar Martin"
+	}
+}
 ---
 
-<Layout title='Remodeling'>
+<Layout seo={SEORemodeling}>
 	<SectionCta
 		image='/imagenes/remodeling/portada.jpg'
 		title='remodeling'

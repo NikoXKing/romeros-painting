@@ -34,9 +34,34 @@ if (Astro.request.method === "POST") {
 }
 
 export const prerender = false
+import type { SEOProps } from "astro-seo"
+const summary =
+	"Get in touch with us for professional painting services in Fort Lauderdale & Miami. Call or message us today for a free estimate!"
+const SEOContacto: SEOProps = {
+	title: "Romeros Painting - Contact",
+	description: summary,
+	canonical: "https://romerospaintingmaintenance.com",
+	charset: "UTF-8",
+	openGraph: {
+		basic: {
+			title: "Romeros Painting - Contact",
+			image: "/logo-romeros-painting.svg",
+			type: "image",
+			url: "https://romerospaintingmaintenance.com"
+		}
+	},
+	twitter: {
+		title: "Romeros Painting - Contact",
+		card: "summary_large_image",
+		image: "logo-romeros-painting.svg",
+		description: summary,
+		imageAlt: "logo-romeros-painting.svg",
+		creator: "Omar Martin"
+	}
+}
 ---
 
-<Layout title='Contact'>
+<Layout seo={SEOContacto}>
 	<section
 		class="min-h-screen bg-[url('/imagenes/contact.jpeg')] bg-no-repeat bg-center bg-contain dark:from-gray-700 dark:via-gray-800 dark:to-gray-900"
 	>

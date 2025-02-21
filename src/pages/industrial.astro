@@ -7,9 +7,34 @@ import { industrial } from "../libs/data"
 import { dividirEnGrupos } from "../libs/index"
 
 const masonry = dividirEnGrupos(industrial, 3)
+import type { SEOProps } from "astro-seo"
+const summary =
+	"Durable industrial painting solutions in Fort Lauderdale & Miami. Protect and enhance your facility with expert coatings. Call us for a quote!"
+const SEOIndustrial: SEOProps = {
+	title: "Romeros Painting - Industrial",
+	description: summary,
+	canonical: "https://romerospaintingmaintenance.com",
+	charset: "UTF-8",
+	openGraph: {
+		basic: {
+			title: "Romeros Painting - Industrial",
+			image: "/logo-romeros-painting.svg",
+			type: "image",
+			url: "https://romerospaintingmaintenance.com"
+		}
+	},
+	twitter: {
+		title: "Romeros Painting - Industrial",
+		card: "summary_large_image",
+		image: "logo-romeros-painting.svg",
+		description: summary,
+		imageAlt: "logo-romeros-painting.svg",
+		creator: "Omar Martin"
+	}
+}
 ---
 
-<Layout title='Industrial'>
+<Layout seo={SEOIndustrial}>
 	<SectionCta
 		image='/imagenes/industrial/portada.jpg'
 		title='industrial painting'

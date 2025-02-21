@@ -7,9 +7,34 @@ import AboutLanding from "../components/sections/AboutLanding.astro"
 import Services from "../components/sections/Services.astro"
 import Brands from "../components/sections/Brands.astro"
 import Certificates from "../components/sections/Certificates.astro"
+import type { SEOProps } from "astro-seo"
+const summary =
+	'"Expert painters in Fort Lauderdale & Miami! We offer high-quality residential & commercial painting services. Get a free quote today!'
+const SEOHome: SEOProps = {
+	title: "Romeros Painting",
+	description: summary,
+	canonical: "https://romerospaintingmaintenance.com",
+	charset: "UTF-8",
+	openGraph: {
+		basic: {
+			title: "Romeros Painting",
+			image: "/logo-romeros-painting.svg",
+			type: "image",
+			url: "https://romerospaintingmaintenance.com"
+		}
+	},
+	twitter: {
+		title: "Romeros Painting",
+		card: "summary_large_image",
+		image: "logo-romeros-painting.svg",
+		description: summary,
+		imageAlt: "logo-romeros-painting.svg",
+		creator: "Omar Martin"
+	}
+}
 ---
 
-<Layout title='Romeros Painting'>
+<Layout seo={SEOHome}>
 	<Hero />
 	<!-- <Slider /> -->
 	<Services />

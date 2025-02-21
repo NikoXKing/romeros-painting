@@ -5,9 +5,34 @@ import SectionCta from "../components/sections/SectionCta.astro"
 import Gallery from "../components/Gallery.astro"
 import Modal from "../components/Modal.astro"
 import { residential } from "../libs/data"
+import type { SEOProps } from "astro-seo"
+const summary =
+	"Top-quality residential painting in Fort Lauderdale & Miami. Interior & exterior painting for a fresh, new look. Contact us for a free estimate!"
+const SEOResidential: SEOProps = {
+	title: "Romeros Painting - Residential",
+	description: summary,
+	canonical: "https://romerospaintingmaintenance.com",
+	charset: "UTF-8",
+	openGraph: {
+		basic: {
+			title: "Romeros Painting - Residential",
+			image: "/logo-romeros-painting.svg",
+			type: "image",
+			url: "https://romerospaintingmaintenance.com"
+		}
+	},
+	twitter: {
+		title: "Romeros Painting - Residential",
+		card: "summary_large_image",
+		image: "logo-romeros-painting.svg",
+		description: summary,
+		imageAlt: "logo-romeros-painting.svg",
+		creator: "Omar Martin"
+	}
+}
 ---
 
-<Layout title='Residential'>
+<Layout seo={SEOResidential}>
 	<SectionCta
 		image='/imagenes/residential/portada.jpg'
 		title='residential painting'

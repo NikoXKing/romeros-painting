@@ -1,0 +1,20 @@
+---
+import Gallery from "../../components/Gallery.astro"
+import Layout from "../../layouts/Layout.astro"
+
+const { id } = Astro.params
+const images = import.meta.glob(
+	`/imagenes/portfolio/${id}/*.{png,jpg,jpeg,gif,svg}`
+)
+
+const imagenes = Object.entries(images).map(([path]) => {
+	return {
+		src: path,
+		alt: ""
+	}
+})
+---
+
+<Layout title=`portfolio ${id}`>
+	<Gallery images={imagenes} />
+</Layout>

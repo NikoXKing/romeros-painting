@@ -6,9 +6,34 @@ import Gallery from "../components/Gallery.astro"
 import TargetModal from "../components/TargetModal.astro"
 import Modal from "../components/Modal.astro"
 import ServicesInfo from "../components/ServicesInfo.astro"
+import type { SEOProps } from "astro-seo"
+const summary =
+	"Professional commercial painting services in Fort Lauderdale & Miami. Enhance your business with high-quality finishes. Get a free quote today!"
+const SEOCommercial: SEOProps = {
+	title: "Romeros Painting - Commercial",
+	description: summary,
+	canonical: "https://romerospaintingmaintenance.com",
+	charset: "UTF-8",
+	openGraph: {
+		basic: {
+			title: "Romeros Painting - Commercial",
+			image: "/logo-romeros-painting.svg",
+			type: "image",
+			url: "https://romerospaintingmaintenance.com"
+		}
+	},
+	twitter: {
+		title: "Romeros Painting - Commercial",
+		card: "summary_large_image",
+		image: "logo-romeros-painting.svg",
+		description: summary,
+		imageAlt: "logo-romeros-painting.svg",
+		creator: "Omar Martin"
+	}
+}
 ---
 
-<Layout title='Comercial'>
+<Layout seo={SEOCommercial}>
 	<SectionCta
 		image='/imagenes/commercial/portada.jpg'
 		title='commercial painting'
